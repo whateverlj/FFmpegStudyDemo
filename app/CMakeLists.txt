@@ -39,6 +39,13 @@ set_target_properties( avutil-55
                        PROPERTIES IMPORTED_LOCATION
                        ${CMAKE_SOURCE_DIR}/src/main/jniLibs/armeabi-v7a/libavutil-55.so )
 
+add_library( libpostproc-54
+        SHARED
+        IMPORTED  )
+set_target_properties( libpostproc-54
+        PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_SOURCE_DIR}/src/main/jniLibs/armeabi-v7a/libpostproc-54.so )
+
 add_library( swresample-2
              SHARED
              IMPORTED  )
@@ -71,6 +78,7 @@ target_link_libraries(
                        avcodec-57
                        avfilter-6
                        avutil-55
+                       libpostproc-54
                        swresample-2
                        swscale-4
                        -landroid
